@@ -10,26 +10,29 @@ public class Main {
         taskSix(4);
         taskSeven(3);
         taskEight("Abcx", 3);
+        taskNine(2024);
+        taskTen();
+        taskEleven();
 
     }
 
-    public static void printThreeWords(){
-            System.out.println("\nOrange\nBanana\nApple");
+    public static void printThreeWords() {
+        System.out.println("\nOrange\nBanana\nApple");
     }
 
-    public static void checkSumSign(){
+    public static void checkSumSign() {
         int a = 255;
         int b = -279;
         int sum = a + b;
 
         if (sum >= 0) {
             System.out.println("Сумма положительная");
-        }
-        else{
+        } else {
             System.out.println("Сумма отрицательная");
         }
     }
-    public static void printColor(){
+
+    public static void printColor() {
         int value = 99;
 
         if (value <= 0) {
@@ -42,27 +45,29 @@ public class Main {
             System.out.println("Зеленый");
         }
     }
-    public static void compareNumbers(){
+
+    public static void compareNumbers() {
         int a = 5;
         int b = 1500;
 
         if (a >= b) {
             System.out.println("a >= b");
-        }
-        else{
+        } else {
             System.out.println("a < b");
         }
     }
-    public static void taskFive(int a, int b){
+
+    public static void taskFive(int a, int b) {
         int sum = a + b;
 
-        if (sum >= 10 && sum <= 20){
+        if (sum >= 10 && sum <= 20) {
             System.out.println("true");
         } else {
             System.out.println("false");
         }
     }
-    public static void taskSix(int a){
+
+    public static void taskSix(int a) {
 
         if (a >= 0) {
             System.out.println("Положительное");
@@ -70,6 +75,7 @@ public class Main {
             System.out.println("Отрицательное");
         }
     }
+
     public static void taskSeven(int a) {
 
         if (a < 0) {
@@ -79,10 +85,42 @@ public class Main {
         }
 
     }
+
     public static void taskEight(String a, int b) {
         for (int i = 0; i < b; i++) {
-            System.out.print(a); // Для вывода каждого сообщения с новой строки System.out.println(a);
+            System.out.println(a); // Для вывода всех сообщений в одну строку System.out.print(a);
         }
     }
 
+    public static void taskNine(int year) {
+        boolean leapYear = true;
+        boolean nonLeapYear = false;
+
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(leapYear);
+        } else {
+            System.out.println(nonLeapYear);
+        }
+    }
+
+    public static void taskTen() {
+        int[] array = {1, 0, 0, 0, 1, 0, 1, 0, 1, 0};
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) {
+                array[i] = 1;
+            } else {
+                array[i] = 0;
+            }
+            System.out.println(0); // Не понял как грамотно вывести
+        }
+    }
+    public static void taskEleven(){
+        int i = 1;
+
+        for (int j = 1; j <= 100; j++) {
+            System.out.print(i + (i++ % 10 == 0 ? "\n" : " "));
+        }
+    }
 }
+
